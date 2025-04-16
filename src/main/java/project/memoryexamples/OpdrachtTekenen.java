@@ -11,6 +11,7 @@ public class OpdrachtTekenen {
         p.setName("Jamy");
         givePersonADog(p);
         changePerson(p);
+        System.out.println(p.getDog().getName());
         changeDog(p.getDog());
         System.out.println(p.getName() + " : " + p.getDog().getName());
     }
@@ -21,9 +22,11 @@ public class OpdrachtTekenen {
     }
 
     public static void changePerson(Person p) {
+        Person oldP = p;
         p = new Person();
         p.setName("Maaike");
-        p.setDog(null);
+        p.setDog(oldP.getDog());
+        p.getDog().setName("blablabla");
     }
 
     public static void changeDog(Dog d) {
