@@ -12,6 +12,7 @@ public class OpdrachtTekenen {
         givePersonADog(p);
         changePerson(p);
         changeDog(p.getDog());
+        System.out.println(p.getName() + " : " + p.getDog().getName());
     }
 
     public static void givePersonADog(Person p) {
